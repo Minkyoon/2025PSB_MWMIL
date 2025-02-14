@@ -12,7 +12,6 @@ Pediatric **Crohn’s disease (CD)** is a chronic inflammatory bowel disease tha
 - **Using clustering-constrained attention MIL (CLAM)** for feature extraction.
 - **Outperforming unimodal models and clinicians** in remission failure prediction.
 
-![Model Architecture](./image/figure1.png)
 
 ## Installation
 
@@ -77,7 +76,6 @@ The model was evaluated using **10-fold cross-validation** on **127 pediatric CD
 - **Tabular XGBoost: 0.685**
 
 ### **Model Performance Comparison**
-![Performance Comparison](./image/figure3.png)
 
 | Model                        | AUROC | Accuracy | Sensitivity | Specificity | F1 Score |
 |-----------------------------|------|----------|-------------|-------------|---------|
@@ -87,6 +85,20 @@ The model was evaluated using **10-fold cross-validation** on **127 pediatric CD
 | **Unimodal Tabular XGBoost** | 0.685 | 0.68 | 0.60 | 0.75 | 0.66 |
 | **Clinician 1**            | 0.70  | 0.65 | 0.72 | 0.55 | 0.68 |
 | **Clinician 2**            | 0.65  | 0.60 | 0.50 | 0.65 | 0.58 |
+
+### **Explainability: Attention-Based Key Image Selection**
+  
+The **MWMIL** model utilizes an attention mechanism to highlight the most influential images contributing to its predictions.  
+**Figure 3** illustrates the top images that received the highest attention scores during inference, demonstrating the **model's ability to focus on clinically relevant features**.
+
+By leveraging **attention-based feature selection**, the model:
+- **Prioritizes critical endoscopic and MRE images** that are strongly correlated with remission failure.
+- **Assigns higher importance scores** to images displaying severe inflammatory lesions, ulcerations, or luminal narrowing.
+- **Provides interpretability for clinicians**, aiding in the understanding of which visual features most significantly influence the model's predictions.
+
+This attention-driven approach ensures that **MWMIL not only achieves high performance but also enhances clinical transparency** by explicitly identifying key diagnostic patterns.
+
+![Explainability - Key Image Selection](./image/figure3.png)
 
 ## Citation
 
