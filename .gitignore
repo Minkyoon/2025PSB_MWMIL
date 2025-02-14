@@ -1,0 +1,8 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        **/.DS_Store
+__pycache__/
+
+*.csv
+*.pt
+
+data
+tab_endo_multi
